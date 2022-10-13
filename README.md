@@ -4,53 +4,53 @@
 [![format & lint](https://github.com/jlplenio/crude-twitch-viewer-bot/actions/workflows/format_lint.yml/badge.svg)](https://github.com/jlplenio/crude-twitch-viewer-bot/actions/workflows/format_lint.yml)
 [![](https://github.com/jlplenio/crude-twitch-viewer-bot/actions/workflows/build.yml/badge.svg)](https://github.com/jlplenio/crude-twitch-viewer-bot/actions/workflows/build.yml)
 
-Disclaimer: For educational purpose only!
+Isenção de responsabilidade: Apenas para fins educacionais!
 
-Small tool that spawns muted Google Chrome instances via [Playwright](https://github.com/microsoft/playwright-python), each with a different user-agent and HTTP proxy connection. 
-Each instance navigates to the twitch channel, activates theater mode and adheres itself to the available screen space. 
-Settings in localStorage ensure the lowest possible resolution.
+Pequena ferramenta que gera instâncias silenciadas do Google Chrome via [Playwright](https://github.com/microsoft/playwright-python), cada um com uma conexão de proxy HTTP e agente de usuário diferente.
+Cada instância navega para o canal do twitch, ativa o modo teatro e adere ao espaço de tela disponível.
+As configurações em localStorage garantem a resolução mais baixa possível.
 
-- Download the one-file executable for Windows from the [latest CTVB release](https://github.com/jlplenio/crude-twitch-viewer-bot/releases/latest).  
+- Baixe o executável de um arquivo para Windows a partir do [Mais recente CTVB](https://github.com/jlplenio/crude-twitch-viewer-bot/releases/latest).  
 
-Read the comprehensive [wiki](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki) for a [detailed tutorial](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Detailed-Tutorial), [usage tips](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Advanced-control) and [troubleshooting steps](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Troubleshooting).
+Leia calmamente a [Wiki](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki) para um [Tutorial detalhado](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Detailed-Tutorial), [Dicas de uso](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Advanced-control) e [Etapas de solução de problemas](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Troubleshooting).
 
-### Important
-- You need to provide your own HTTP proxies to the [proxy_list.txt](proxy/proxy_list.txt)  
-  Follow the [Webshare Proxy Guide](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Webshare.io-Proxies-Guide), if you need to buy some.
-- Chrome needs to be already installed on your system.
-- Tested with instance count: Headless ~100, headful ~30.
-- Tested on Windows 10.
-- CPU load and bandwidth can get heavy. Channels with 160p work best.
+### Importante
+- Você precisa fornecer seus próprios proxies HTTP para o [proxy_list.txt](proxy/proxy_list.txt)  
+  Segue o [Guia de proxy de compartilhamento da Web](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Webshare.io-Proxies-Guide), se você precisar comprar alguns.
+- O Chrome já deve estar instalado em seu sistema.
+- Testado com contagem de instâncias: Headless ~ 100, headful ~ 30.
+- Testado no Windows 10.
+- A carga da CPU e a largura de banda podem ficar pesadas. Canais com 160p funcionam melhor.
 
-### In Action
+### Em ação
 
 ![](docs/gui.png)
 
-#### Color codes of the square boxes
+#### Códigos de cores das caixas quadradas
 
-⬛ - Instance is spawned.    🟨 - Instance is buffering.    🟩 - Instance is actively watching.
+⬛ - A instância é gerada.    🟨 - A instância está em buffer.    🟩 - A instância está assistindo ativamente.
  
-#### Headful Spawning
+#### Abertura em Headful
 ![](docs/instances_spawning.gif)  
-(If you go headless, the browser windows will be invisible)  
+(Se você usar em Headless, as janelas do navegador ficarão invisíveis)  
 
 
-### Usage Windows
+### Uso no Windows
 
-Read the comprehensive [wiki](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki) for a [detailed tutorial](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Detailed-Tutorial), [usage tips](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Advanced-control) and [troubleshooting steps](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Troubleshooting).
+Leia calmamente a [Wiki](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki) para um [Tutorial detalhado](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Detailed-Tutorial), [Dicas de uso](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Advanced-control) e [Etapas de solução de problemas](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Troubleshooting).
 
-#### Quickstart Steps
-Download the one-file executable for Windows from the [latest CTVB release](https://github.com/jlplenio/crude-twitch-viewer-bot/releases/latest).
+#### Etapas de início rápido
+Baixe o executável de um arquivo para Windows a partir do [Mais recente CTVB](https://github.com/jlplenio/crude-twitch-viewer-bot/releases/latest).  
 
-1. Extract zip file to a folder.
-2. Add your own proxies to proxy/proxy_list.txt or follow the [Webshare Proxy Guide](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Webshare.io-Proxies-Guide), if you need to buy some.
-3. Start executable and wait for GUI.
-4. Spawn instances patiently.
+1. Extraia o arquivo zip para uma pasta.
+2. Adicione seus próprios proxies ao proxy/proxy_list.txt ou siga o [Guia de proxy de compartilhamento da Web](https://github.com/jlplenio/crude-twitch-viewer-bot/wiki/Webshare.io-Proxies-Guide), se você precisar comprar alguns.
+3. Inicie o executável e aguarde a GUI.
+4. Gere instâncias pacientemente.
 
-#### Interactions with the square boxes
-🖱️ Left click: Refresh page.  
-🖱️ Right click: Destroy instance.  
-🖱️ Left click + CTRL: Take screenshot (saved in root folder).   
+#### Interações com as caixas quadradas
+🖱️ Botão esquerdo: Atualizar página. 
+🖱️ Botão direito: Destrua a instância.
+🖱️ Botão esquerdo + CTRL: Faça a captura de tela (salvo na pasta raiz).  
 
 
 
